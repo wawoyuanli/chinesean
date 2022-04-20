@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "element-ui": "^2.15.8",
+    "lib-flexible": "^0.3.2",
+    "postcss-px2rem": "^0.3.0",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -19,6 +23,10 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "postcss-pxtorem": "^6.0.0",
+    "px2rem-loader": "^0.1.9",
+    "sass": "^1.50.1",
+    "sass-loader": "^10.0.0",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
@@ -31,9 +39,17 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
     },
-    "rules": {}
+    "rules": {
+      "generator-star-spacing": "off",
+      "no-tabs": "off",
+      "no-unused-vars": "off",
+      "no-console": "off",
+      "no-irregular-whitespace": "off",
+      "no-debugger": "off"
+    }
   },
   "browserslist": [
     "> 1%",
