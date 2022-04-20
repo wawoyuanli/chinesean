@@ -25,6 +25,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container_home {
+    position: fixed;
+    top: 0px;
+    width: 100%;
     .main-header {
         width: 100%;
     }

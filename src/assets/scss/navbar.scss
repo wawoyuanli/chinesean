@@ -1,0 +1,59 @@
+//当屏幕尺寸大于1200px
+@media screen and (min-width: 1201px) {
+  .container {
+    width: 100%;
+  }
+}
+//当屏幕尺寸小于1200px
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    .navbar {
+      display: block;
+    }
+  }
+}
+//当屏幕尺寸大于1000时
+@media (min-width: 1000px) {
+  .navbar {
+    display: flex;
+  }
+}
+//当屏幕尺寸小于999px
+@media (max-width: 999px) {
+  .navbar {
+    display: flex !important;
+    width: 100%;
+    .navbar-header {
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .navbar-custom-menu {
+      display: none;
+    }
+    .menu_img {
+      display: block !important;
+    }
+  }
+}
+//当屏幕尺寸大于500时
+@media (min-width: 500px) {
+  .navbar {
+    display: flex;
+  }
+}
+//当屏幕尺寸小于500px
+@media (max-width: 501px) {
+  .navbar {
+    .navbar-header {
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .navbar-custom-menu {
+      display: none;
+    }
+    .menu_img {
+      display: block !important;
+    }
+  }
+}

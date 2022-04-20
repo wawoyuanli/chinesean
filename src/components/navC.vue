@@ -1,6 +1,16 @@
 <template>
     <div class="container">
         <nav class="navbar">
+            <img src="../assets/images/menu.png" alt="" class="menu_img" @click="clickMenu(showMenu)">
+            <ul class="dropdown-menu" v-show="showMenu">
+               <li>Home</li>
+               <li>About Us</li>
+               <li>Publisher</li>
+               <li>Advertiser</li>
+               <li>Blog</li>
+               <li>FAQ</li>
+               <li>Contact Us</li>
+            </ul>
             <div class="navbar-header">
                 <a href="#">
                     <img src="../assets/images/logo.png" alt="" class="brand-image">
@@ -67,6 +77,7 @@ export default {
                 icon: require('../assets/images/china.png')
             }],
             flagicon: require('../assets/images/america.png'),
+            showMenu:false
         }
     },
     methods: {
@@ -76,12 +87,17 @@ export default {
             } else if (e === '简体') {
                 this.flagicon = require('../assets/images/china.png')
             }
+        },
+        clickMenu(showMenu) {
+            console.log('点击菜单')
+            this.showMenu=!showMenu
         }
     }
-
 }
 </script>
 <style lang="scss" scoped>
+@import "../assets/scss/navbar.scss";
+
 .container {
     margin: 0 auto;
     display: flex;
@@ -92,6 +108,25 @@ export default {
         align-items: center;
         justify-content: space-between;
         padding: 45px 0px;
+
+        .menu_img {
+            display: none;
+            width: 40px;
+            margin-left: 20px;
+        }
+        .dropdown-menu{
+            position: absolute;
+            width: 75%;
+            height: 500px;
+            top: 100px;
+            left: 0px;
+            list-style: none;
+            box-shadow: 0px 0px 5px #e7e7e7;
+            li{
+                padding: 20px 0px;
+                border-bottom: 1px solid #e7e7e7;
+            }
+        }
 
         .navbar-header {
             width: 324px;
