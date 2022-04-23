@@ -4,7 +4,7 @@
             <navc />
         </header>
         <section class="main_container" :style="{ 'margin-top': marginTop }">
-            login
+            faq
         </section>
         <footer>
             <footerC />

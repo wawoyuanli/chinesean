@@ -1,10 +1,10 @@
 <template>
     <div class="container_home">
-        <header class="main-header">
+        <header class="main-header" ref="header">
             <navc />
         </header>
-        <section class="main_container">
-            pubisher
+        <section class="main_container" :style="{ 'margin-top': marginTop }">
+            publisherPage
         </section>
         <footer>
             <footerC />
@@ -20,6 +20,15 @@ export default {
     components: {
         navc,
         footerC
+    },
+    data() {
+        return {
+            marginTop: 0
+        }
+    },
+    mounted() {
+        let header = this.$refs.header
+        this.marginTop = header.clientHeight + 'px'
     }
 }
 </script>
@@ -29,11 +38,13 @@ export default {
         width: 100%;
         position: fixed;
         top: 0px;
-        width: 100%;
+        background-color: #ffffff;
     }
 
     .main_container {
         min-height: 600px;
+        text-align: center;
+        background-color: antiquewhite;
     }
 }
 </style>

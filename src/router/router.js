@@ -1,12 +1,20 @@
-// const  VueRouter= require("vue-router");
 import VueRouter from "vue-router";
 import Vue from "vue";
 Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "home",
+    redirect: "/home_index",
+  },
+  {
+    path: "/home_index",
+    name: "home_index",
     component: () => import("../views/homePage/homePage.vue"),
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../views/loginPage/loginPage.vue"),
   },
   {
     path: "/about_us",
@@ -22,6 +30,21 @@ const routes = [
     path: "/advertiser",
     name: "advertiser",
     component: () => import("../views/advertiserPage/advertiserPage.vue"),
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: () => import("../views/blogPage/blogPage.vue"),
+  },
+  {
+    path: "/contact_us",
+    name: "contact_us",
+    component: () => import("../views/contactPage/contactPage.vue"),
+  },
+  {
+    path: "/faq",
+    name: "faq",
+    component: () => import("../views/faqPage/faqPage.vue"),
   },
 ];
 

@@ -13,17 +13,17 @@
       </div>
       <div class="middle_box">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Publisher</a></li>
-          <li><a href="">Advertiser</a></li>
+          <li><a href="#/home_index">Home</a></li>
+          <li><a href="#/about_us">About Us</a></li>
+          <li><a href="#/publisher">Publisher</a></li>
+          <li><a href="#/advertiser">Advertiser</a></li>
         </ul>
       </div>
       <div class="right_box">
         <ul>
-          <li><a href="">Blog</a></li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a href="#/blog">Blog</a></li>
+          <li><a href="#/faq">FAQ</a></li>
+          <li><a href="#/contact_us">Contact Us</a></li>
           <li><a href="">Program Directory</a></li>
         </ul>
       </div>
