@@ -126,6 +126,114 @@
             </div>
 
         </section>
+        <section class="why_chinesean">
+            <div class="content">
+                <p></p>
+                <div class="why_chinesean_wrapper">
+                    <div>Our technology </div>
+                    <div>makes a difference</div>
+                </div>
+                <p></p>
+            </div>
+            <div class="four_text_img_box">
+                <div class="img_text_box">
+                    <img src="../../assets/images/icon_1.png" alt="">
+                    <p class="title">API</p>
+                    <p class="content">Our inhouse platform offers the most flexible API integration with any platform
+                        in the world</p>
+                </div>
+                <div class="img_text_box">
+                    <img src="../../assets/images/icon_2.png" alt="">
+                    <p class="title line_height">Analytics</p>
+                    <p class="content">We provide comprehensive analytics for optimization of performance</p>
+                </div>
+                <div class="img_text_box">
+                    <img src="../../assets/images/icon_3.png" alt="">
+                    <p class="title line_height">AI</p>
+                    <p class="content">Our big data and AI platform offer automated recommendation, intelligent ad
+                        serving and fraud detection</p>
+                </div>
+            </div>
+            <div class="four_text_img_box">
+                <div class="img_text_box">
+                    <img src="../../assets/images/icon_4.png" alt="">
+                    <p class="title">Loyalty Solution</p>
+                    <p class="content">
+                        We offer a full suite of points earning and redemption solutions to loyalty programs</p>
+                </div>
+                <div class="img_text_box">
+                    <img src="../../assets/images/icon_5.png" alt="">
+                    <p class="title line_height">Cross-device</p>
+                    <p class="content">We support cross-device and cookieless options for tracking transactions across
+                        devices</p>
+                </div>
+                <div class="img_text_box">
+                    <img src="../../assets/images/icon_6.png" alt="">
+                    <p class="title line_height">Innovation</p>
+                    <p class="content">Together with our partners, our R&D team continuously come up with new solutions
+                        to bring results</p>
+                </div>
+            </div>
+        </section>
+        <section class="why_chinesean">
+            <div class="content">
+                <p></p>
+                <div class="why_chinesean_wrapper">
+                    <div>Our </div>
+                    <div>Partners</div>
+                </div>
+                <p></p>
+            </div>
+            <el-carousel :interval="5000" arrow="always" class="swiper_wrap">
+                <el-carousel-item v-for="(item, index) in 2" :key="index">
+                    <div class="swiper" v-if="index === 0">
+                        <img src="../../assets/images/JD_com.png" alt="">
+                        <img src="../../assets/images/Klook.png" alt="">
+                        <img src="../../assets/images/Nike.png" alt="">
+                        <img src="../../assets/images/Tripcom.png" alt="">
+                        <img src="../../assets/images/ebay.png" alt="">
+                        <img src="../../assets/images/Nike.png" alt="">
+                    </div>
+                    <div class="swiper" v-if="index === 1">
+                        <img src="../../assets/images/agoda.png" alt="">
+                        <img src="../../assets/images/Branding_lenovo-logo_lenovologoposred_low_res.png" alt="">
+                        <img src="../../assets/images/Charles & Keith.png" alt="">
+                        <img src="../../assets/images/Taobao.png" alt="">
+                        <img src="../../assets/images/Zalora.png" alt="">
+                        <img src="../../assets/images/Estee Lauder.png" alt="">
+                    </div>
+                </el-carousel-item>
+            </el-carousel>
+        </section>
+        <section class="affiliate_marketing">
+            <div class="content">
+                <p></p>
+                <div class="why_chinesean_wrapper">
+                    <div>What is affiliate marketing? </div>
+                </div>
+                <p></p>
+            </div>
+            <p class="affiliate_content">Affiliate marketing is a major model of performance marketing in which the
+                advertiser pays publishers and
+                affiliate networks the advertising fee based on actual outcome of the marketing campaigns. This fee is
+                usually in the form of revenue share or a fixed fee per registration. To advertisers, affiliate
+                marketing is a low-risk and potentially high-return approach to grow sales and expand into new markets.
+                To publishers, both for leisure or business, affiliate marketing is a reliable means to monetize
+                audience traffic to get a stable income.</p>
+            <el-card class="box-card whiteBox">
+                <div class="box1">
+                    <div>Tap into our list of partner advertisers</div>
+                    <div>I'm a Publisher</div>
+                </div>
+                <div class="box2">
+                    <div>Want to grow your business in Greater China or South East Asia</div>
+                    <div>I'm a Advertiser</div>
+                </div>
+            </el-card>
+            <div class="whitebottom">
+
+            </div>
+        </section>
         <footer>
             <footerC />
         </footer>
@@ -276,6 +384,8 @@ export default {
     }
 
     .why_chinesean {
+        padding: 80px 0px;
+
         .content {
             padding-bottom: 60px;
 
@@ -333,6 +443,26 @@ export default {
                 .content {
                     text-align: center;
                     color: #525252;
+                }
+            }
+        }
+
+        .swiper_wrap {
+            width: 80%;
+            margin: 0 auto;
+
+            ::v-deep .el-carousel__container {
+                height: 94px;
+            }
+
+            .swiper {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                img {
+                    width: 189px;
+                    height: 94px;
                 }
             }
         }
@@ -414,6 +544,54 @@ export default {
                 }
 
             }
+        }
+    }
+
+    .affiliate_marketing {
+        width: 100%;
+        background: #386dbc;
+
+        .content {
+            padding: 60px 0px 20px 0px;
+
+            p {
+                width: 80px;
+                height: 4px;
+                background: #fff;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .why_chinesean_wrapper {
+                display: flex;
+                justify-content: center;
+                padding: 10px 0px;
+                font-size: 30px;
+
+                div:last-child {
+                    color: #ffffff;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .affiliate_content {
+            width: 60%;
+            color: #fff;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 30px;
+
+        }
+
+        .whiteBox {
+            display: flex;
+            position: absolute;
+        }
+
+        .whitebottom {
+            width: 100%;
+            height: 200px;
         }
     }
 }
