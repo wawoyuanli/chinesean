@@ -27,6 +27,9 @@ export default {
 .container_home {
     .main-header {
         width: 100%;
+        position: fixed;
+        top: 0px;
+        width: 100%;
     }
 
     .main_container {

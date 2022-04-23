@@ -3,13 +3,13 @@
         <nav class="navbar">
             <img src="../assets/images/menu.png" alt="" class="menu_img" @click="clickMenu(showMenu)">
             <ul class="dropdown-menu" v-show="showMenu">
-               <li>Home</li>
-               <li>About Us</li>
-               <li>Publisher</li>
-               <li>Advertiser</li>
-               <li>Blog</li>
-               <li>FAQ</li>
-               <li>Contact Us</li>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Publisher</li>
+                <li>Advertiser</li>
+                <li>Blog</li>
+                <li>FAQ</li>
+                <li>Contact Us</li>
             </ul>
             <div class="navbar-header">
                 <a href="#">
@@ -61,6 +61,7 @@
     </div>
 </template>
 <script>
+// import {changeState} from './resize.js'
 export default {
     name: 'nav-c',
     data() {
@@ -77,7 +78,25 @@ export default {
                 icon: require('../assets/images/china.png')
             }],
             flagicon: require('../assets/images/america.png'),
-            showMenu:false
+            showMenu: false,
+            clientWidth: 0
+        }
+    },
+    mounted() {
+        let _th = this
+        window.onresize = function () {
+            _th.clientWidth = document.body.clientWidth
+        }
+    },
+    watch: {
+        clientWidth(newValue, oldValue) {
+            if (this.showMenu) {
+                if (newValue > 500) {
+                    this.showMenu = false
+                }
+            }
+
+
         }
     },
     methods: {
@@ -90,7 +109,7 @@ export default {
         },
         clickMenu(showMenu) {
             console.log('点击菜单')
-            this.showMenu=!showMenu
+            this.showMenu = !showMenu
         }
     }
 }
@@ -114,7 +133,8 @@ export default {
             width: 40px;
             margin-left: 20px;
         }
-        .dropdown-menu{
+
+        .dropdown-menu {
             position: absolute;
             width: 75%;
             height: 500px;
@@ -122,7 +142,8 @@ export default {
             left: 0px;
             list-style: none;
             box-shadow: 0px 0px 5px #e7e7e7;
-            li{
+
+            li {
                 padding: 20px 0px;
                 border-bottom: 1px solid #e7e7e7;
             }
