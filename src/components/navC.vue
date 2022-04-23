@@ -91,7 +91,7 @@ export default {
   watch: {
     clientWidth(newValue, oldValue) {
       if (this.showMenu) {
-        if (newValue > 500) {
+        if (newValue > 800) {
           this.showMenu = false
         }
       }
@@ -142,6 +142,7 @@ export default {
       left: 0px;
       list-style: none;
       box-shadow: 0px 0px 5px #e7e7e7;
+      background: #fff;
 
       li {
         padding: 20px 0px;

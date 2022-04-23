@@ -7,8 +7,8 @@
           the world. Our promotion and technical support help our vast network of affiliates to achieve best performance
           for our advertisers.</p>
         <div class="p_a">
-          <a href="">I'm a Publisher</a>
-          <a href="">I'm an Advertiser</a>
+          <a href="#/publisher">I'm a Publisher</a>
+          <a href="#/advertiser">I'm an Advertiser</a>
         </div>
       </div>
       <div class="middle_box">
