@@ -213,26 +213,30 @@
                 </div>
                 <p></p>
             </div>
-            <p class="affiliate_content">Affiliate marketing is a major model of performance marketing in which the
+            <div class="affiliate_content">Affiliate marketing is a major model of performance marketing in which the
                 advertiser pays publishers and
                 affiliate networks the advertising fee based on actual outcome of the marketing campaigns. This fee is
                 usually in the form of revenue share or a fixed fee per registration. To advertisers, affiliate
                 marketing is a low-risk and potentially high-return approach to grow sales and expand into new markets.
                 To publishers, both for leisure or business, affiliate marketing is a reliable means to monetize
-                audience traffic to get a stable income.</p>
-            <el-card class="box-card whiteBox">
-                <div class="box1">
-                    <div>Tap into our list of partner advertisers</div>
-                    <div>I'm a Publisher</div>
-                </div>
-                <div class="box2">
-                    <div>Want to grow your business in Greater China or South East Asia</div>
-                    <div>I'm a Advertiser</div>
+                audience traffic to get a stable income.</div>
+            <el-card class="elcard box-card">
+                <div class="whiteBox">
+                    <div class="box1">
+                        <div class="tap">Tap into our list of partner advertisers</div>
+                        <div class="publisher_btn">I'm a Publisher</div>
+                    </div>
+                    <div class="box2">
+                        <div class="want">Want to grow your business in Greater China or South East Asia</div>
+                        <div class="advertiser_btn">I'm a Advertiser</div>
+                    </div>
                 </div>
             </el-card>
             <div class="whitebottom">
-
             </div>
+        </section>
+        <section class="bgwhite">
+
         </section>
         <footer>
             <footerC />
@@ -550,6 +554,7 @@ export default {
     .affiliate_marketing {
         width: 100%;
         background: #386dbc;
+        overflow: hidden;
 
         .content {
             padding: 60px 0px 20px 0px;
@@ -584,15 +589,81 @@ export default {
 
         }
 
-        .whiteBox {
-            display: flex;
+        .elcard {
             position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 60%;
+
+            .whiteBox {
+                display: flex;
+                width: 100%;
+                margin: 0 auto;
+
+                .box1 {
+                    width: 50%;
+                    border-right: 1px solid gray;
+                    margin: auto;
+
+                    .tap {
+                        width: 80%;
+                        text-align: center;
+                        margin: 0 auto;
+                        font-size: 30px;
+                        min-height: 150px;
+                        padding: 20px 0px;
+                    }
+
+                    .publisher_btn {
+                        width: 200px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        border-radius: 10px;
+                        border: 2px solid #027BFA;
+                        margin: auto;
+                        color: #027BFA;
+                    }
+                }
+
+                .box2 {
+                    flex: 1;
+                    text-align: center;
+                    margin: auto;
+
+                    .want {
+                        width: 80%;
+                        text-align: center;
+                        margin: 0 auto;
+                        font-size: 30px;
+                        min-height: 150px;
+                        padding: 20px 0px;
+                    }
+
+                    .advertiser_btn {
+                        width: 200px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        border-radius: 10px;
+                        border: 2px solid #027BFA;
+                        margin: auto;
+                        color: #027BFA;
+
+                    }
+                }
+            }
         }
 
         .whitebottom {
             width: 100%;
-            height: 200px;
+            height: 100px;
         }
+    }
+    .bgwhite{
+        width: 100%;
+        min-height: 260px;
     }
 }
 </style>
