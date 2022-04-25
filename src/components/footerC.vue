@@ -64,9 +64,11 @@ export default {
         width: 660px;
         color: #ffffff;
       }
-      .p_a{
+
+      .p_a {
         display: flex;
-        a{
+
+        a {
           width: 200px;
           height: 50px;
           line-height: 50px;
@@ -75,7 +77,8 @@ export default {
           border: 1px solid rgb(197, 191, 191);
           border-radius: 5px;
           text-decoration: none;
-          &:last-child{
+
+          &:last-child {
             margin-left: 30px;
           }
         }
@@ -92,7 +95,12 @@ export default {
           a {
             color: #ffffff;
             text-decoration: none;
+
+            &:hover {
+              border-bottom: 2px solid #52b4f7;
+            }
           }
+
         }
       }
     }
@@ -107,6 +115,10 @@ export default {
           a {
             color: #ffffff;
             text-decoration: none;
+
+            &:hover {
+              border-bottom: 2px solid #52b4f7;
+            }
           }
         }
       }

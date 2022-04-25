@@ -293,7 +293,6 @@ export default {
             left: 0;
             min-width: 100%;
             min-height: 100vh;
-            // overflow: hidden;
             transition: 1s opacity;
         }
 
@@ -312,7 +311,7 @@ export default {
                     width: 100%;
                     display: flex;
                     justify-content: center;
-                    font-size: 60px;
+                    font-size: $bigfontSize;
 
                     .line1 {
                         color: #ffffff;
