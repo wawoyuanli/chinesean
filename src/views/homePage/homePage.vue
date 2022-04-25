@@ -1,5 +1,6 @@
 <template>
     <div class="container_home">
+
         <header class="main_header" ref="header">
             <navc />
         </header>
@@ -224,11 +225,13 @@
                 <div class="whiteBox">
                     <div class="box1">
                         <div class="tap">Tap into our list of partner advertisers</div>
-                        <div class="publisher_btn">I'm a Publisher</div>
+                        <div class="publisher_btn"><a href="#/publisher" class="a_link">I'm a Publisher
+                                <font-awesome-icon :icon="['fas', 'arrow-right']"></font-awesome-icon></a></div>
                     </div>
                     <div class="box2">
                         <div class="want">Want to grow your business in Greater China or South East Asia</div>
-                        <div class="advertiser_btn">I'm a Advertiser</div>
+                        <div class="advertiser_btn"><a href="#/advertiser" class="a_link">I'm a Advertiser
+                                <font-awesome-icon :icon="['fas', 'arrow-right']"></font-awesome-icon></a></div>
                     </div>
                 </div>
             </el-card>
@@ -236,7 +239,6 @@
             </div>
         </section>
         <section class="bgwhite">
-
         </section>
         <footer>
             <footerC />
@@ -623,7 +625,11 @@ export default {
                         border-radius: 10px;
                         border: 2px solid #027BFA;
                         margin: auto;
-                        color: #027BFA;
+
+                        .a_link {
+                            text-decoration: none;
+                            color: #027BFA;
+                        }
                     }
                 }
 
@@ -649,7 +655,11 @@ export default {
                         border-radius: 10px;
                         border: 2px solid #027BFA;
                         margin: auto;
-                        color: #027BFA;
+
+                        .a_link {
+                            text-decoration: none;
+                            color: #027BFA;
+                        }
 
                     }
                 }
@@ -661,7 +671,8 @@ export default {
             height: 100px;
         }
     }
-    .bgwhite{
+
+    .bgwhite {
         width: 100%;
         min-height: 260px;
     }

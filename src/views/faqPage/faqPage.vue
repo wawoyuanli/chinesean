@@ -19,8 +19,8 @@
                     <p>Publisher</p>
                     <p>Publisher Sign-up</p>
                     <div class="el_collapse">
-                        <el-collapse v-model="activeName" accordion>
-                            <el-collapse-item v-for="(item, index) in signup" :key="index" :title="item.title">
+                        <el-collapse v-model="activeName" accordion @change="change">
+                            <el-collapse-item v-for="(item, index) in signup" :key="index" :title="item.title" >
                                 <div>{{ item.content }}</div>
                             </el-collapse-item>
                         </el-collapse>
@@ -68,14 +68,19 @@ export default {
             activeNames: ['1'],
             signup,
             joinPrograms,
-            reportCommission
+            reportCommission,
+            color:'#212529'
         }
     },
     mounted() {
         let header = this.$refs.header
         this.marginTop = header.clientHeight + 'px'
-
-
+    },
+    methods:{
+        change(e){
+            this.color='red'
+            debugger
+        }
     }
 }
 </script>
@@ -122,7 +127,7 @@ export default {
                     width: 900px;
 
                     ::v-deep .el-collapse-item__header {
-                        color: #007bff;
+                        // color: #007bff;
                         font-size: 20px;
                     }
 

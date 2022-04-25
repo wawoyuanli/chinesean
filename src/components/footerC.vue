@@ -21,7 +21,7 @@
       </div>
       <div class="right_box">
         <ul>
-          <li><a href="#/blog">Blog</a></li>
+          <li><a href="http://blog.chinesean.com/zh/">Blog</a></li>
           <li><a href="#/faq">FAQ</a></li>
           <li><a href="#/contact_us">Contact Us</a></li>
           <li><a href="">Program Directory</a></li>

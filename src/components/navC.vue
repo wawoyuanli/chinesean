@@ -31,7 +31,7 @@
             <a href="#/advertiser">Advertiser</a>
           </li>
           <li class="menu">
-            <a href="#/blog">Blog</a>
+            <a href="http://blog.chinesean.com/zh/">Blog</a>
           </li>
           <li class="menu">
             <a href="#/faq">FAQ</a>
